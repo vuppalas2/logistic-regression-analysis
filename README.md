@@ -99,19 +99,34 @@ CSV file with CHD outcome and predictors including:
 
 ## How to Use
 
-1. Place your input CSV files (`NABCR.csv` for NABCR project, and `SHHS.csv` for SHHS project) in accessible directories.  
-2. Update file paths in the corresponding R scripts to correctly point to your input data and desired output folders.  
-3. Install all required R packages if missing.  
-4. Run the R scripts for each project.  
-5. Review generated output files (tables and plots) under the `output/` directory.
-
+1. Place your input CSV files (NABCR.csv for NABCR project, and SHHS.csv for SHHS project) in the respective data/ folders or accessible directories.
+2. Update file paths in the corresponding R scripts inside the scripts/ folders to correctly point to your input data and desired output folders.
+3. Install all required R packages if missing.
+4. Run the R scripts for each project from the scripts/ directory.
+5. Review generated output files (tables and plots) under the output/ directory.
+   
 ---
 
 ## Directory Structure
 ```
-output/
-├── tables/ # CSV summary tables and logistic regression model results
-└── plots/ # Diagnostic and exploratory plots (e.g., odds ratio plots, IPTW weight histograms)
+NABCR/
+├── data/        # Input data files (NABCR.csv)
+├── output/
+│   ├── tables/  # CSV summary tables and model results
+│   └── plots/   # Diagnostic and exploratory plots
+└── scripts/     # R scripts for NABCR analyses
+
+SHHS/
+├── data/        # Input data files (SHHS.csv)
+├── output/
+│   ├── tables/  # CSV summary tables and model results
+│   └── plots/   # Diagnostic and exploratory plots
+└── scripts/     # R scripts for SHHS analyses
+
+.gitignore
+README.md
+.DS_Store
+
 ```
 
 
