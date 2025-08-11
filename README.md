@@ -32,8 +32,6 @@ install.packages(c("car", "lmtest", "broom", "dplyr", "ggplot2", "ResourceSelect
 
 ---
 
-## Project Details
-
 ## NABCR Logistic Regression Analysis
 
 **Data Requirements:**  
