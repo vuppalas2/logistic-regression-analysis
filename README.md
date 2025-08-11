@@ -31,7 +31,7 @@ Install missing packages in R with:
 
 ```r
 install.packages(c("car", "lmtest", "broom", "dplyr", "ggplot2", "ResourceSelection", "sandwich"))
-
+```
 
 ## Project Details
 
