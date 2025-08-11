@@ -1,29 +1,26 @@
 # Logistic Regression Analyses: NABCR & SHHS Projects
 
-## Overview  
+## Overview
 This repository contains logistic regression analyses on biomedical datasets, focusing on cancer survival and heart disease risk prediction. These projects demonstrate how to model and interpret key predictors related to health outcomes using rigorous statistical methods in R.
-
----
 
 ## Projects
 
-### NABCR Logistic Regression Analysis  
+### NABCR Logistic Regression Analysis
 Examines the association between receptor level and survival status (death), adjusting for cancer stage, with stage-specific effect estimation and interaction testing.
 
-### SHHS Logistic Regression Analysis  
+### SHHS Logistic Regression Analysis
 Performs a comprehensive analysis on the Scottish Heart Health Survey dataset to identify predictors of coronary heart disease (CHD) through univariable and multivariable logistic regression, confounding and interaction assessments, and model validation.
 
 ---
 
 ## Prerequisites
 
-### Software  
+### Software
 - R (version 4.0 or later recommended)
 
-### Required R Packages  
+### Required R Packages
 - For NABCR project:  
-  `car`, `lmtest`, `broom`, `dplyr`, `ggplot2`
-
+  `car`, `lmtest`, `broom`, `dplyr`, `ggplot2`  
 - For SHHS project:  
   `dplyr`, `car`, `ResourceSelection`, `lmtest`, `broom`, `sandwich`
 
@@ -33,19 +30,21 @@ Install missing packages in R with:
 install.packages(c("car", "lmtest", "broom", "dplyr", "ggplot2", "ResourceSelection", "sandwich"))
 ```
 
-## Project Details
+# Project Details
 
-### NABCR Logistic Regression Analysis
+## NABCR Logistic Regression Analysis
 
 **Data Requirements:**  
-CSV file named `NABCR.csv` with variables:  
+CSV file named `NABCR.csv` with variables:
+
 - `level`: receptor level (coded 1 or 2)  
 - `stage`: cancer stage (coded 1 to 3)  
 - `dead`: survival status (0 = alive, 1 = dead)  
 
 The script converts numeric codes to factor variables with descriptive labels.
 
-**Analysis Workflow:**  
+**Analysis Workflow:**
+
 - Load required packages and dataset  
 - Prepare data (convert variables to factors)  
 - Descriptive statistics and frequency tables  
@@ -57,7 +56,8 @@ The script converts numeric codes to factor variables with descriptive labels.
 - Visualization of odds ratios with 95% confidence intervals by cancer stage  
 - Save model summaries and plots  
 
-**Output Files:**  
+**Output Files:**
+
 - `output/tables/stage_specific_ORs.csv` — Odds ratios by cancer stage  
 - `output/tables/model1_summary.csv` — Model 1 summary  
 - `output/tables/model2_summary.csv` — Model 2 summary  
@@ -66,10 +66,11 @@ The script converts numeric codes to factor variables with descriptive labels.
 
 ---
 
-### SHHS Logistic Regression Analysis
+## SHHS Logistic Regression Analysis
 
 **Data Requirements:**  
-CSV file with CHD outcome and predictors including:  
+CSV file with CHD outcome and predictors including:
+
 - Coronary heart disease (CHD) status  
 - Total cholesterol  
 - BMI  
@@ -78,7 +79,8 @@ CSV file with CHD outcome and predictors including:
 - Systolic blood pressure  
 - Physical activity  
 
-**Analysis Workflow:**  
+**Analysis Workflow:**
+
 - Load dataset and prepare variables (categorical conversion, missing data check)  
 - Descriptive statistics for predictors  
 - Univariable logistic regression models  
@@ -90,7 +92,8 @@ CSV file with CHD outcome and predictors including:
 - Assess smoking effect using propensity score weighting with IPTW  
 - Save tables and diagnostic plots  
 
-**Output Files:**  
+**Output Files:**
+
 - Summary tables and model outputs saved under `output/tables/`  
 - Diagnostic and exploratory plots saved under `output/plots/`  
 - Model comparison and IPTW analysis outputs included  
@@ -99,15 +102,16 @@ CSV file with CHD outcome and predictors including:
 
 ## How to Use
 
-1. Place your input CSV files (NABCR.csv for NABCR project, and SHHS.csv for SHHS project) in the respective data/ folders or accessible directories.
-2. Update file paths in the corresponding R scripts inside the scripts/ folders to correctly point to your input data and desired output folders.
-3. Install all required R packages if missing.
-4. Run the R scripts for each project from the scripts/ directory.
-5. Review generated output files (tables and plots) under the output/ directory.
-   
+1. Place your input CSV files (`NABCR.csv` for NABCR project, and `SHHS.csv` for SHHS project) in the respective `data/` folders or accessible directories.  
+2. Update file paths in the corresponding R scripts inside the `scripts/` folders to correctly point to your input data and desired output folders.  
+3. Install all required R packages if missing.  
+4. Run the R scripts for each project from the `scripts/` directory.  
+5. Review generated output files (tables and plots) under the `output/` directory.  
+
 ---
 
 ## Directory Structure
+
 ```
 NABCR/
 ├── data/        # Input data files (NABCR.csv)
