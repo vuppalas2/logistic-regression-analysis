@@ -10,7 +10,7 @@ library(dplyr)      # For data manipulation
 library(ggplot2)    # For plotting
 
 # 2. Load Data -------------------------------------------------
-nabcr_data <- read.csv(".........../data/NABCR.csv")
+nabcr_data <- read.csv("................................./data/NABCR.csv")
 
 # Inspect data structure and summary
 str(nabcr_data)
@@ -128,7 +128,7 @@ ggplot(stage_ORs, aes(x = Stage, y = OR)) +
 
 # 8. Save Results ------------------------------------------------
 
-output_dir <- "../output"
+output_dir <- "................................./output"
 tables_dir <- file.path(output_dir, "tables")
 plots_dir <- file.path(output_dir, "plots")
 
