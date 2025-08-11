@@ -10,7 +10,7 @@ library(dplyr)      # For data manipulation
 library(ggplot2)    # For plotting
 
 # 2. Load Data -------------------------------------------------
-nabcr_data <- read.csv("/Users/sushmavuppala/Desktop/Projects/logistic_regression/NABCR/data/NABCR.csv")
+nabcr_data <- read.csv(".........../data/NABCR.csv")
 
 # Inspect data structure and summary
 str(nabcr_data)
