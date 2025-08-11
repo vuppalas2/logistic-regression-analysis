@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# logistic-regression-analysis
-Logistic regression analysis projects for NABCR and SHHS datasets.
-=======
+
 # Logistic Regression Analyses: NABCR & SHHS Projects
 
 ## Overview
