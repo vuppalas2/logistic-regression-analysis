@@ -127,8 +127,8 @@ SHHS/
 │   └── plots/   # Diagnostic and exploratory plots
 └── scripts/     # R scripts for SHHS analyses
 
-.gitignore
 README.md
+.gitignore
 .DS_Store
 
 ```
