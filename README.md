@@ -1,7 +1,9 @@
 # Logistic Regression Analyses: NABCR & SHHS Projects
 
-This repository contains logistic regression analyses on biomedical datasets, focusing on cancer survival and heart disease risk prediction.
+## Overview
+This repository contains logistic regression analyses on biomedical datasets, focusing on cancer survival and heart disease risk prediction. These projects demonstrate how to model and interpret key predictors related to health outcomes using rigorous statistical methods in R.
 
+## Projects
 
 ### NABCR Logistic Regression Analysis
 
@@ -106,7 +108,7 @@ CSV file with CHD outcome and predictors including:
 
 ### How to Use
 
-1. Place your input CSV files (`NABCR.csv` for NABCR project, and appropriate CSV for SHHS) in accessible directories.  
+1. Place your input CSV files (`NABCR.csv` for NABCR project, and 'SHHS.csv' for SHHS project) in accessible directories.  
 2. Update file paths in the corresponding R scripts to correctly point to your input data and desired output folders.  
 3. Install all required R packages if missing.  
 4. Run the R scripts for each project.  
