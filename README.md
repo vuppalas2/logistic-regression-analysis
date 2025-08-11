@@ -124,5 +124,3 @@ output/
 
 
 If you need further assistance or code examples for either project, feel free to ask!
-
->>>>>>> fd82a88 (Initial upload of NABCR and SHHS logistic regression projects)
