@@ -1,0 +1,6 @@
+"Variable","Logit_Estimate","Logit_Lower_CI","Logit_Upper_CI","LogBin_Estimate","LogBin_Lower_CI","LogBin_Upper_CI","Poisson_Estimate","Poisson_SE","Poisson_Lower_CI","Poisson_Upper_CI"
+"(Intercept)",0.001,0,0.003,0.001,0,0.004,0.001,0.565,0,0.003
+"totchol",1.391,1.239,1.561,1.338,1.209,1.48,1.355,0.047,1.235,1.486
+"bmi",1.057,1.014,1.101,1.052,1.013,1.093,1.053,0.018,1.015,1.091
+"smoking_c2",1.435,0.881,2.338,1.396,0.876,2.226,1.412,0.239,0.885,2.254
+"smoking_c3",2.068,1.351,3.167,1.97,1.311,2.959,1.989,0.206,1.328,2.981

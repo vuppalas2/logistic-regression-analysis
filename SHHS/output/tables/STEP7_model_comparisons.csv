@@ -1,0 +1,4 @@
+"Comparison","Chi_Square","DF","p_value"
+"Main vs Full Interaction",14.3470673438812,5,0.0135487939766978
+"Main vs Simplified Interaction",6.63894524482384,2,0.0361719029756845
+"Full vs Simplified Interaction",7.70812209905739,3,0.0524452706471083
