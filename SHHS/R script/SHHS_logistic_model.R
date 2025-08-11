@@ -449,7 +449,7 @@ hoslem.test(mydata1$chd, fitted(intmodel2), g = 10)
 ## Step 8. Save Results 
 
 # Make sure output directories exist
-output_dir <- "../output"
+output_dir <- "................................./output"
 tables_dir <- file.path(output_dir, "tables")
 
 if (!dir.exists(output_dir)) dir.create(output_dir)
