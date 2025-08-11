@@ -30,7 +30,7 @@ Install missing packages in R with:
 install.packages(c("car", "lmtest", "broom", "dplyr", "ggplot2", "ResourceSelection", "sandwich"))
 ```
 
-# Project Details
+## Project Details
 
 ## NABCR Logistic Regression Analysis
 
