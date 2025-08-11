@@ -11,7 +11,7 @@ library(lmtest)               # For likelihood ratio test (LR.test)
 # 2. Load Data -------------------------------------------------
 
 # Read CSV data file into R
-mydata1 = read.csv(file = "/Users/sushmavuppala/Desktop/Projects/logistic_regression/SHHS/data/SHHS.csv", header = TRUE)
+mydata1 = read.csv(file = "................................./data/SHHS.csv", header = TRUE)
 
 # Check structure of the dataset to understand variable types
 str(mydata1)
@@ -69,7 +69,7 @@ list(
 )
 
 # Save the results ---
-output_dir <- "/Users/sushmavuppala/Desktop/Projects/logistic_regression/SHHS/output"
+output_dir <- "................................./SHHS/output"
 tables_dir <- file.path(output_dir, "tables")
 
 if (!dir.exists(output_dir)) dir.create(output_dir)
@@ -87,9 +87,9 @@ write.csv(ci_df, file = file.path(tables_dir, "confidence_intervals_continuous.c
 
 cat("Descriptive statistics and confidence intervals saved to:", tables_dir, "\n")
 
-#--------------------------
+#------------------------------------------------------------------------
 # BUILDING A PARSIMONIOUS LOGISTIC REGRESSION MODEL FOR CHD PREDICTION
-#--------------------------
+#------------------------------------------------------------------------
 
 # Objective:
 # To develop a parsimonious and interpretable logistic regression model predicting
@@ -455,33 +455,33 @@ tables_dir <- file.path(output_dir, "tables")
 if (!dir.exists(output_dir)) dir.create(output_dir)
 if (!dir.exists(tables_dir)) dir.create(tables_dir)
 
-# STEP 1: Univariable logistic regression results
+# 1: Univariable logistic regression results
 write.csv(STEP1, file = file.path(tables_dir, "STEP1_univariable_results.csv"), row.names = FALSE)
 
-# STEP 2: Multivariable logistic regression coefficients summary (extracting coefficients table)
+# 2: Multivariable logistic regression coefficients summary (extracting coefficients table)
 step2_summary <- summary(step2model)
 step2_coefs <- as.data.frame(coef(step2_summary))
 step2_coefs$Variable <- rownames(step2_coefs)
 rownames(step2_coefs) <- NULL
 write.csv(step2_coefs, file = file.path(tables_dir, "STEP2_multivariable_coefficients.csv"), row.names = FALSE)
 
-# STEP 3: Confounding assessment tables
+# 3: Confounding assessment tables
 write.csv(confounding1, file = file.path(tables_dir, "STEP3_confounding_excluding_age.csv"), row.names = FALSE)
 write.csv(confounding2, file = file.path(tables_dir, "STEP3_confounding_excluding_bmi.csv"), row.names = FALSE)
 write.csv(STEP3, file = file.path(tables_dir, "STEP3_confounding_combined.csv"), row.names = FALSE)
 
-# STEP 4: Wald test results for adding back excluded variables
+# 4: Wald test results for adding back excluded variables
 write.csv(wald_results, file = file.path(tables_dir, "STEP4_wald_tests.csv"), row.names = FALSE)
 
-# STEP 5: Functional form assessment - log odds by quartiles for each variable
+# 5: Functional form assessment - log odds by quartiles for each variable
 write.csv(plotdata_totchol, file = file.path(tables_dir, "STEP5_logodds_totchol_quartiles.csv"), row.names = FALSE)
 write.csv(plotdata_bmi, file = file.path(tables_dir, "STEP5_logodds_bmi_quartiles.csv"), row.names = FALSE)
 write.csv(plotdata_systol, file = file.path(tables_dir, "STEP5_logodds_systol_quartiles.csv"), row.names = FALSE)
 
-# STEP 6: Interaction effects - Likelihood ratio test results
+# 6: Interaction effects - Likelihood ratio test results
 write.csv(STEP6, file = file.path(tables_dir, "STEP6_interaction_tests.csv"), row.names = FALSE)
 
-# STEP 7: Final models coefficient summaries
+# 7: Final models coefficient summaries
 intmodel1_summary <- summary(intmodel1)
 intmodel1_coefs <- as.data.frame(coef(intmodel1_summary))
 intmodel1_coefs$Variable <- rownames(intmodel1_coefs)
@@ -535,9 +535,9 @@ dev.off()
 
 
 
-#--------------------------
+#----------------------------------------------------------------------------------
 # COMPARISON OF LOGISTIC, LOG-BINOMIAL, AND POISSON REGRESSION MODELS FOR CHD RISK
-#--------------------------
+#-----------------------------------------------------------------------------------
 
 # Objective:
 # To estimate and compare the association between predictors (total cholesterol, BMI, smoking status)
@@ -551,7 +551,7 @@ library(sandwich)  # for robust standard errors
 library(lmtest)    # for coefficient testing with robust SEs
 
 # Load and prepare data
-mydata2 <- read.csv("/Users/sushmavuppala/Desktop/Projects/logistic_regression/SHHS/data/SHHS.csv", header = TRUE)
+mydata2 <- read.csv("................................./data/SHHS.csv", header = TRUE)
 mydata2$smoking_c <- as.factor(mydata2$smoking)
 
 # Fit logistic regression model (logit link)
@@ -608,7 +608,7 @@ results_table <- cbind(
 print(results_table)
 
 # Define output directory path (the folder where you want to save tables)
-output_tables_dir <- file.path(output_dir, "tables")  # <-- define this variable
+output_tables_dir <- file.path(output_dir, "tables")  
 
 # Create the directory if it doesn't exist
 if (!dir.exists(output_tables_dir)) {
@@ -623,9 +623,9 @@ cat("Model comparison results saved to", file.path(output_tables_dir, "CHD_Model
 
 
 
-#--------------------------
+#-------------------------------------------------------------------------------------
 # ASSESSING CURRENT SMOKING AS A RISK FACTOR FOR CHD USING PROPENSITY SCORE WEIGHTING
-#--------------------------
+#-------------------------------------------------------------------------------------
 
 # Objective:
 # To evaluate whether being a current smoker increases the risk of coronary heart disease (CHD),
@@ -636,7 +636,7 @@ library(broom)   # for augment() function
 library(car)     # for Anova()
 
 # Load and inspect data
-mydata3 <- read.csv("/Users/sushmavuppala/Desktop/Projects/logistic_regression/SHHS/data/SHHS.csv", header = TRUE)
+mydata3 <- read.csv("................................./data/SHHS.csv", header = TRUE)
 str(mydata3)
 
 # Define current smoker variable: 1 = current smoker, 0 = non-current smoker
@@ -662,7 +662,7 @@ ps_model.results$wgt <- ifelse(ps_model.results$current_smoker == 1,
 summary(ps_model.results$wgt)
 
 # Define output folders (update the path as per your system)
-output_dir <- "/Users/sushmavuppala/Desktop/Projects/logistic_regression/SHHS/output"
+output_dir <- "................................./SHHS/output"
 tables_dir <- file.path(output_dir, "tables")
 plots_dir <- file.path(output_dir, "plots")
 
