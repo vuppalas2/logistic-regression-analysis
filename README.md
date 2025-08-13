@@ -1,4 +1,4 @@
-# Logistic Regression Analyses: NABCR & SHHS Projects
+# Logistic Regression Analyses: NABCR & SHHS 
 
 ## Overview
 This repository contains logistic regression analyses on biomedical datasets, focusing on cancer survival and heart disease risk prediction. These projects demonstrate how to model and interpret key predictors related to health outcomes using rigorous statistical methods in R.
